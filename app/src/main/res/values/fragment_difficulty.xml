@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.HomeFragment"
+    tools:context=".DifficultyFragment"
     android:background="@drawable/ic_bg"
     android:fillViewport="true">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,37 +17,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Hi Username"
-                android:textColor="@android:color/white"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/textView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Please choose your category"
+                android:text="Let's choose the difficulty"
+                android:gravity="center"
                 android:textColor="@android:color/white"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                android:gravity="center"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cvMath"
+                android:id="@+id/cvEasy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -62,39 +50,39 @@
                     android:layout_height="78dp">
 
                     <ImageView
-                        android:id="@+id/iv_math"
+                        android:id="@+id/iv_easy"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_math" />
+                        app:srcCompat="@drawable/ic_easy" />
 
                     <TextView
-                        android:id="@+id/tv_math"
+                        android:id="@+id/tv_easy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
-                        android:text="Math"
+                        android:text="Easy"
                         android:textSize="24sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/iv_math"
-                        app:layout_constraintStart_toEndOf="@+id/iv_math"
-                        app:layout_constraintTop_toTopOf="@+id/iv_math" />
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_easy"
+                        app:layout_constraintStart_toEndOf="@+id/iv_easy"
+                        app:layout_constraintTop_toTopOf="@+id/iv_easy" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cvGeography"
+                android:id="@+id/cvMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                app:layout_constraintEnd_toEndOf="@id/cvMath"
-                app:layout_constraintStart_toStartOf="@id/cvMath"
-                app:layout_constraintTop_toBottomOf="@id/cvMath"
+                app:layout_constraintEnd_toEndOf="@id/cvEasy"
+                app:layout_constraintStart_toStartOf="@id/cvEasy"
+                app:layout_constraintTop_toBottomOf="@id/cvEasy"
                 app:cardCornerRadius="8dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -102,39 +90,39 @@
                     android:layout_height="78dp">
 
                     <ImageView
-                        android:id="@+id/iv_geography"
+                        android:id="@+id/iv_medium"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_geography" />
+                        app:srcCompat="@drawable/ic_medium" />
 
                     <TextView
-                        android:id="@+id/tv_geography"
+                        android:id="@+id/tv_medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
-                        android:text="Geography"
+                        android:text="Medium"
                         android:textSize="24sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/iv_geography"
-                        app:layout_constraintStart_toEndOf="@+id/iv_geography"
-                        app:layout_constraintTop_toTopOf="@+id/iv_geography" />
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_medium"
+                        app:layout_constraintStart_toEndOf="@+id/iv_medium"
+                        app:layout_constraintTop_toTopOf="@+id/iv_medium" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cvHistory"
+                android:id="@+id/cvHard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                app:layout_constraintEnd_toEndOf="@id/cvGeography"
-                app:layout_constraintStart_toStartOf="@id/cvGeography"
-                app:layout_constraintTop_toBottomOf="@id/cvGeography"
+                app:layout_constraintEnd_toEndOf="@id/cvMedium"
+                app:layout_constraintStart_toStartOf="@id/cvMedium"
+                app:layout_constraintTop_toBottomOf="@id/cvMedium"
                 app:cardCornerRadius="8dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -142,68 +130,28 @@
                     android:layout_height="78dp">
 
                     <ImageView
-                        android:id="@+id/iv_history"
+                        android:id="@+id/iv_hard"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_history_1" />
-
+                        app:srcCompat="@drawable/ic_hard" />
                     <TextView
                         android:id="@+id/tv_history"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
-                        android:text="History"
+                        android:text="Hard"
                         android:textSize="24sp"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/iv_history"
-                        app:layout_constraintStart_toEndOf="@+id/iv_history"
-                        app:layout_constraintTop_toTopOf="@+id/iv_history" />
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_hard"
+                        app:layout_constraintStart_toEndOf="@+id/iv_hard"
+                        app:layout_constraintTop_toTopOf="@+id/iv_hard" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvScience"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                app:layout_constraintEnd_toEndOf="@id/cvHistory"
-                app:layout_constraintStart_toStartOf="@id/cvHistory"
-                app:layout_constraintTop_toBottomOf="@id/cvHistory"
-                app:cardCornerRadius="8dp">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="78dp">
-
-                    <ImageView
-                        android:id="@+id/iv_science"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginStart="24dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_science" />
-
-                    <TextView
-                        android:id="@+id/tv_science"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:text="Science"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/iv_science"
-                        app:layout_constraintStart_toEndOf="@+id/iv_science"
-                        app:layout_constraintTop_toTopOf="@+id/iv_science" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </ScrollView>

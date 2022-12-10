@@ -1,4 +1,4 @@
-package com.example.quizz_app;
+package com.example;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.quizapp.databinding.ActivityQuizQuestionsBinding;
+import com.example.quizz_app.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,13 +34,13 @@ public class QuizQuestionsActivity extends AppCompatActivity implements View.OnC
         binding = ActivityQuizQuestionsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        mUserName = getIntent().getStringExtra(com.example.quizapp.Constants.USER_NAME);
-        mCategory = getIntent().getStringExtra(com.example.quizapp.Constants.CATEGORY);
-        mDifficulty = getIntent().getStringExtra(com.example.quizapp.Constants.DIFFICULTY);
+        mUserName = getIntent().getStringExtra(Constants.USER_NAME);
+        mCategory = getIntent().getStringExtra(Constants.CATEGORY);
+        mDifficulty = getIntent().getStringExtra(Constants.DIFFICULTY);
 
 
         // mQuestionList will contain 10 questions of each type-difficulty
-        mQuestionsList = com.example.quizapp.Constants.getQuestions(mDifficulty, mCategory);
+        mQuestionsList = Constants.getQuestions(mDifficulty, mCategory);
 
         Collections.shuffle(mQuestionsList);
 
@@ -100,7 +101,7 @@ public class QuizQuestionsActivity extends AppCompatActivity implements View.OnC
         for (TextView option: options) {
             option.setTextColor(Color.parseColor("#7A8089"));
             option.setTypeface(Typeface.DEFAULT);
-            option.setBackground(ContextCompat.getDrawable(this,R.drawable.default_option_border_bg));
+            option.setBackground(ContextCompat.getDrawable(this, R.drawable.default_option_border_bg));
         }
 
     }
@@ -143,11 +144,11 @@ public class QuizQuestionsActivity extends AppCompatActivity implements View.OnC
                         setQuestion();
                     } else {
                         Intent intent = new Intent(this, ResultActivity.class);
-                        intent.putExtra(com.example.quizapp.Constants.USER_NAME, mUserName);
-                        intent.putExtra(com.example.quizapp.Constants.CORRECT_ANSWER, mCorrectAnswers);
-                        intent.putExtra(com.example.quizapp.Constants.TOTAL_QUESTIONS, mQuestionsList.size());
-                        intent.putExtra(com.example.quizapp.Constants.DIFFICULTY,mDifficulty);
-                        intent.putExtra(com.example.quizapp.Constants.CATEGORY, mCategory);
+                        intent.putExtra(Constants.USER_NAME, mUserName);
+                        intent.putExtra(Constants.CORRECT_ANSWER, mCorrectAnswers);
+                        intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList.size());
+                        intent.putExtra(Constants.DIFFICULTY,mDifficulty);
+                        intent.putExtra(Constants.CATEGORY, mCategory);
                         startActivity(intent);
                         finish();
                     }

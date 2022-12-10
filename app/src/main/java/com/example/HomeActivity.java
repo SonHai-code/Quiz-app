@@ -1,4 +1,4 @@
-package com.example.quizz_app;
+package com.example;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.quizapp.databinding.ActivityHomeBinding;
+import com.example.quizz_app.R;
 
 public class HomeActivity extends AppCompatActivity {
     ActivityHomeBinding binding;

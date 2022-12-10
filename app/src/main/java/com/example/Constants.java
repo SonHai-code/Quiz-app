@@ -1,15 +1,13 @@
-package com.example.quizapp;
+package com.example;
 
-import com.example.quiz_app.R;
-import com.example.quizz_app.Question;
+import com.example.quizz_app.R;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 
 public class Constants {
-    final static String USER_NAME = "user_name";
+    public final static String USER_NAME = "user_name";
     final static String TOTAL_QUESTIONS = "total_questions";
     final static String CORRECT_ANSWER = "correct_answer";
     final static String CATEGORY = "category";

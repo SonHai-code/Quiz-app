@@ -1,8 +1,10 @@
-package com.example.quizz_app;
+package com.example;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.quizz_app.R;
 
 public class InformationActivity extends AppCompatActivity {
 

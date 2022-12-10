@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.quizapp.databinding.ActivityMainBinding;
+import com.example.quizz_app.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;

@@ -1,4 +1,4 @@
-package com.example.quizz_app;
+package com.example;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -10,7 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.Constants;
 import com.example.quizapp.databinding.FragmentHomeBinding;
+import com.example.quizz_app.R;
 
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
@@ -24,7 +26,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
 
         if (getArguments() != null) {
-            mUserName = this.getArguments().getString(com.example.quizapp.Constants.USER_NAME);
+            mUserName = this.getArguments().getString(Constants.USER_NAME);
         }
 
         binding.textView3.setText("Hi" + " " + mUserName);
@@ -73,8 +75,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         // Use bundle to save the data
         Bundle result = new Bundle();
-        result.putString(com.example.quizapp.Constants.CATEGORY, data);
-        result.putString(com.example.quizapp.Constants.USER_NAME, mUserName);
+        result.putString(Constants.CATEGORY, data);
+        result.putString(Constants.USER_NAME, mUserName);
 
         DifficultyFragment difficultyFragment = new DifficultyFragment();
         difficultyFragment.setArguments(result);

@@ -1,4 +1,4 @@
-package com.example.quizz_app;
+package com.example;
 
 public class Question {
     private  int id;
