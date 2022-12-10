@@ -10,7 +10,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.quizapp.databinding.FragmentDifficultyBinding;
+import com.example.quizz_app.R;
+import com.example.quizz_app.databinding.FragmentDifficultyBinding;
+
 
 public class DifficultyFragment extends Fragment implements View.OnClickListener {
     FragmentDifficultyBinding binding;

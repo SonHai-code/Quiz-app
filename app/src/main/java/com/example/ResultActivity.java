@@ -1,13 +1,12 @@
-package com.example.quizapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
-import com.example.quizapp.databinding.ActivityResultBinding;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.quizz_app.databinding.ActivityResultBinding;
 
 public class ResultActivity extends AppCompatActivity {
     ActivityResultBinding binding;
